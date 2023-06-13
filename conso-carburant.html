@@ -9,8 +9,9 @@
     <!-- <link rel="shortcut icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="css/styles.css">
-    <title>Beginner Javascript Projects</title>
+    <title>Conso Carburant App</title>
 </head>
 <body>
     <header>
@@ -24,24 +25,8 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarColor03">
                 <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Home
-                      <span class="visually-hidden">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./todolist.html">ToDo List</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="./todolist.html">ToDo List</a>
-                      <a class="dropdown-item" href="./conso-carburant.html">Conso Carburant Controler</a>
-                      <a class="dropdown-item" href="#">Unit Converter</a>
-                    </div>
+                  <li>
+                    <a href="index.html">Back</a>
                   </li>
                 </ul>                
               </div>
@@ -50,10 +35,34 @@
     </header>
     <main>
         <div class="container">
-            <img src="android-chrome-512x512.png" alt="">
-
-            <h1>Bienvenue sur cette page!</h1>
-            <p>Nous vous presenterons plusieurs applictions ecrites en JAVASCRIPT</p>
+          <h3>Conso Carburant App</h3>
+          <form data-bitwarden-watching="1">
+            <hr>
+            <h4>Ajouter une consommation</h4>
+              <div class="form-group row">
+                <label for="todo" class="">Montant</label>
+                <div class="col-sm-10">
+                  <input type="number" class="" id="conso-montant" placeholder="Le montant..." min=0 max=500000>
+                </div>
+                <br>
+              </div>
+              <div class="form-group row">
+                <label for="todo" class="">Kilometrage actuel</label>
+                <div class="col-sm-10">
+                  <input type="number" class="" id="conso-kilometrage" placeholder="Kilometrage actuel..." min=0 max=999999>
+                </div>
+                <br>
+              </div>
+              <button id="add-conso-btn" type="submit">Ajouter une conso</button>
+          </form>
+          <br>
+          <div id="conso-container">
+            <h2>Toutes les consommations (<span id="consos-nbr">0</span>)</h2>
+            <button id="clear-btn" type="submit">Effacer la liste.</button>
+            <ul class="consolist">
+              <h5>Aucune consommation a afficher...</h5>
+            </ul>
+          </div>
         </div>
     </main>
     <footer>
@@ -61,5 +70,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/todolist.js"></script>
 </body>
 </html>
